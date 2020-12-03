@@ -36,10 +36,19 @@ namespace Announcer
         {
             m_Logger.LogInformation("Announcer Loaded");
             m_Logger.LogInformation("FPlugins Discord: https://discord.gg/RuWChce");
-            AsyncHelper.Schedule("Announcement Start", () => Announcement().AsTask());
+            Level.onLevelLoaded += OnLevelLoaded;
             Load = true;
         }
-        
+
+        private void OnLevelLoaded(int level)
+        {
+            level++;
+            if(level == 2)
+            {
+                AsyncHelper.Schedule("Announcement Start", () => Announcement().AsTask());
+            }
+        }
+
 #pragma warning disable 1998
         protected override async UniTask OnUnloadAsync()
 #pragma warning restore 1998
