@@ -33,6 +33,6 @@ announces:
   message: Just another announce
   isrich: false
 - url: https://images-ext-1.discordapp.net/external/1Vg3rH_5wKUid81LpNF3YTOgl-x1Vvix0sNvfrhbtpE/https/unturneditems.com/media/253.png
-  message: Just another announce2
+  message: <color=red>Just another announce2</color>
   isrich: false
 ```
